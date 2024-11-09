@@ -5,7 +5,7 @@ media:
 content:
   - name: posts
     label: Posts
-    path: src/content/posts
+    path: src/content/blog
     type: collection
     format: yaml-frontmatter
     view:
