@@ -107,7 +107,7 @@ import slide5 from "@/assets/slides/5.jpg";
 	function initSwiper() {
 		console.log("initSwiper");
 		swiper = new Swiper(".swiper-container", {
-			spaceBetween: 30,
+			spaceBetween: 18,
 			slidesPerView: 3,
 			loop: true,
 			freeMode: true,
@@ -117,10 +117,13 @@ import slide5 from "@/assets/slides/5.jpg";
 	function resizeSwiper() {
 		if (window.innerWidth > 1023) {
 			swiper.params.slidesPerView = 5;
+			swiper.params.spaceBetween = 24;
 		} else if (window.innerWidth > 639) {
 			swiper.params.slidesPerView = 4;
+			swiper.params.spaceBetween = 20;
 		} else {
 			swiper.params.slidesPerView = 3;
+			swiper.params.spaceBetween = 16;
 		}
 		swiper.update();
 	}
