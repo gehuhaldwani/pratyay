@@ -101,7 +101,7 @@ import slide5 from "@/assets/slides/5.jpg";
 <!-- Swiper JS -->
 <script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js" defer
 ></script>
-<script is:inline>
+<script is:inline type="js">
 	let swiper;
 
 	function initSwiper() {
@@ -125,18 +125,5 @@ import slide5 from "@/assets/slides/5.jpg";
 	document.addEventListener("DOMContentLoaded", initSwiper);
 	document.addEventListener("astro:after-swap", initSwiper);
 
-	// change slides per view based on window width
 	window.addEventListener("resize", resizeSwiper);
 </script>
-
-<!-- Initialize Swiper
-<script is:inline defer="true">
-	var swiper = new Swiper(".mySwiper", {
-		slidesPerView: 3,
-		spaceBetween: 30,
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		},
-	});
-</script> -->
