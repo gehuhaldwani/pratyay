@@ -101,10 +101,11 @@ import slide5 from "@/assets/slides/5.jpg";
 <!-- Swiper JS -->
 <script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js" defer
 ></script>
-<script is:inline type="js">
+<script>
 	let swiper;
 
 	function initSwiper() {
+		console.log("initSwiper");
 		swiper = new Swiper(".swiper-container", {
 			spaceBetween: 30,
 			slidesPerView: "3",
@@ -122,8 +123,6 @@ import slide5 from "@/assets/slides/5.jpg";
 		swiper.update();
 	}
 
-	document.addEventListener("DOMContentLoaded", initSwiper);
-	document.addEventListener("astro:after-swap", initSwiper);
-
+	initSwiper();
 	window.addEventListener("resize", resizeSwiper);
 </script>
