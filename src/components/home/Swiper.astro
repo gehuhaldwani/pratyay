@@ -74,7 +74,6 @@ import slide5 from "@/assets/slides/5.jpg";
 	</div>
 </div>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <style>
 	.swiper-container {
 		width: 100%;
@@ -98,17 +97,20 @@ import slide5 from "@/assets/slides/5.jpg";
 	}
 </style>
 
-<!-- Swiper JS -->
-<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js" defer
-></script>
 <script>
-	let swiper;
+	import Swiper from "swiper";
+	// import Swiper styles
+	import "swiper/css";
+
+	let swiper: Swiper;
 
 	function initSwiper() {
 		console.log("initSwiper");
 		swiper = new Swiper(".swiper-container", {
 			spaceBetween: 30,
-			slidesPerView: "3",
+			slidesPerView: 3,
+			loop: true,
+			freeMode: true,
 		});
 		resizeSwiper();
 	}
