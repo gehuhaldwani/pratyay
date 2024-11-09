@@ -10,6 +10,13 @@ import SocialIcon from "@/components/widget/SocialIcon.astro";
 	<footer
 		class="container mx-auto max-w-screen-xl flex flex-initial lg:flex-row flex-col gap-10 items-center px-7"
 	>
+		<div class="logo flex-none">
+			<a
+				href="/"
+				class="font-bold font-pacamara-space text-lg hover:text-pacamara-accent transition-all duration-300 dark:text-white dark:hover:text-pacamara-accent"
+				>{config.title}</a
+			>
+		</div>
 		<ul
 			class="list-none text-[14px] font-normal flex flex-initial flex-row content-center items-center gap-x-[35px]"
 		>
@@ -28,6 +35,10 @@ import SocialIcon from "@/components/widget/SocialIcon.astro";
 				socialType="instagram"
 			/>
 
+			<SocialIcon
+				socialUrl={config?.social?.whatsapp}
+				socialType="whatsapp"
+			/>
 			<SocialIcon
 				socialUrl={config?.social?.twitter}
 				socialType="twitter"

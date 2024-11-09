@@ -11,5 +11,6 @@ export default {
 		github: false,
 		instagram: "https://www.instagram.com/pratyay_gehu_haldwani/",
 		twitter: false,
+		whatsapp: "https://chat.whatsapp.com/Ce23OK8YCRv2QN16npS3lz",
 	},
 };
