@@ -9,4 +9,5 @@ import icon from "astro-icon";
 export default defineConfig({
 	integrations: [tailwind(), mdx(), icon()],
 	site: "https://pratyay.gehuhaldwani.in",
+	base: "/",
 });
