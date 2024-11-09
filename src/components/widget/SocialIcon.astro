@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+const { socialUrl = false, socialType } = Astro.props;
+---
+
+{
+	socialUrl && (
+		<li>
+			<a
+				href={socialUrl}
+				target="_blank"
+				aria-label={socialType + "link"}
+			>
+				<Icon
+					name={socialType}
+					class="w-auto h-[15px] transition-all duration-300 text-pacamara-primary/60 hover:text-pacamara-secondary dark:text-pacamara-accent dark:hover:text-pacamara-secondary"
+				/>
+			</a>
+		</li>
+	)
+}

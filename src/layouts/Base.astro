@@ -1,0 +1,93 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import SeoHead from "@/components/SeoHead.astro";
+import Header from "@/components/widget/Header.astro";
+import Footer from "@/components/widget/Footer.astro";
+import "@/css/style.css";
+
+type Props = {
+	title?: string;
+	description?: string;
+	image?: string;
+};
+const { title, description, image } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<script is:inline>
+			const setDarkMode = () => {
+				if (
+					localStorage.darkMode === "true" ||
+					(!("darkMode" in localStorage) &&
+						window.matchMedia("(prefers-color-scheme: dark)")
+							.matches)
+				) {
+					document.documentElement.classList.add("dark");
+					localStorage.darkMode = "true";
+				} else {
+					document.documentElement.classList.remove("dark");
+					localStorage.darkMode = "false";
+				}
+			};
+
+			setDarkMode();
+			// Runs on view transitions navigation
+			document.addEventListener("astro:after-swap", setDarkMode);
+		</script>
+
+		<!-- Favicon -->
+
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="view-transition" content="same-origin" />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="RSS Feed"
+			href={new URL("rss.xml", Astro.site)}
+		/>
+		<SeoHead title={title} description={description} image={image} />
+		<link
+			rel="preload"
+			href="/fonts/inter-v12-latin_latin-ext-regular.woff2"
+			as="font"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/inter-v12-latin_latin-ext-700.woff2"
+			as="font"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/space-grotesk-v15-latin_latin-ext-regular.woff2"
+			as="font"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/space-grotesk-v15-latin_latin-ext-600.woff2"
+			as="font"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/space-grotesk-v15-latin_latin-ext-700.woff2"
+			as="font"
+			crossorigin
+		/>
+		<ViewTransitions />
+	</head>
+
+	<body
+		class="font-pacamara-inter transition-all duration-300 bg-white dark:bg-pacamara-dark"
+	>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
