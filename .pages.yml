@@ -81,7 +81,8 @@ content:
           name: social,
           label: Social Links,
           list: true,
-          required: false,
+          required: true,
+          type: object,
           fields:
             [
               { name: facebook, label: Facebook, type: string, default: false },
