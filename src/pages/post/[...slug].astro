@@ -1,23 +1,26 @@
 ---
 import Base from "@/layouts/Base.astro";
-import LatestPosts from "@/components/blog/LatestPosts.astro";
-import PublishDate from "@/components/blog/PublishDate.astro";
+import LatestPosts from "@/components/post/LatestPosts.astro";
+import PublishDate from "@/components/post/PublishDate.astro";
 import Tag from "@/components/widget/Tag.astro";
 
 import { type CollectionEntry, getCollection, render } from "astro:content";
-import ImageWrapper from "@/components/ImageWrapper.astro";
+import ImageWrapper from "@/components/misc/ImageWrapper.astro";
+import Swiper from "@/components/widget/Swiper.astro";
 
 export async function getStaticPaths() {
-	const posts = await getCollection("blog");
+	const posts = await getCollection("post");
 	return posts.map((post) => ({
 		params: { slug: post.id },
 		props: post,
 	}));
 }
 
-type Props = CollectionEntry<"blog">;
+type Props = CollectionEntry<"post">;
 const post = Astro.props;
 const { Content } = await render(post);
+
+console.log(post.data);
 ---
 
 <Base
@@ -42,19 +45,9 @@ const { Content } = await render(post);
 		</div>
 		{
 			post.data.image && (
-				// <Image
-				// 	src={post.data.image}
-				// 	width="1200"
-				// 	height="250"
-				// 	alt=""
-				// 	loading="eager"
-				// 	decoding="sync"
-				// 	class="block relative mx-auto mt-10 object-cover h-72 md:h-[350px] image-shine rounded-[15px]"
-				// 	loading="eager"
-				// />
 				<ImageWrapper
 					src={post.data.image}
-					class="block relative mx-auto mt-10 object-cover h-72 md:h-[350px] image-shine rounded-[15px]"
+					class="block relative mx-auto mt-10 object-cover h-full max-w-screen-md image-shine rounded-[15px]"
 				/>
 			)
 		}
@@ -76,6 +69,20 @@ const { Content } = await render(post);
 		</div>
 	</article>
 
+	{
+		post.data.carousel && (
+			<section class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10 h-50">
+				<div class="w-full">
+					<Swiper slides={post.data.carousel} />
+				</div>
+			</section>
+		)
+	}
+
+	<div
+		class="w-full h-[1px] mt-10 lg:mt-[50px] overflow-hidden gradient-line group-last:hidden"
+	>
+	</div>
 	<div
 		class="pt-10 mb-7 bg-gradient-to-b from-pacamara-dark/[0.05] to-pacamara-dark[0 dark:bg-gradient-to-b dark:from-bg-black/50 to-bg-black/0"
 	>

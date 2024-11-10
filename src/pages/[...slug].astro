@@ -2,7 +2,7 @@
 import { type CollectionEntry, getCollection, render } from "astro:content";
 
 import Base from "@/layouts/Base.astro";
-import ImageWrapper from "@/components/ImageWrapper.astro";
+import ImageWrapper from "@/components/misc/ImageWrapper.astro";
 
 export async function getStaticPaths() {
 	const pageEntries = await getCollection("page");
@@ -34,7 +34,7 @@ const { Content } = await render(entry);
 			entry.data.image && (
 				<ImageWrapper
 					src={entry.data.image}
-					class="block relative mx-auto mt-10 object-cover h-72 md:h-[350px] image-shine rounded-[15px]"
+					class="block relative mx-auto mt-10 object-cover h-full max-w-screen-md image-shine rounded-[15px]"
 				/>
 			)
 		}

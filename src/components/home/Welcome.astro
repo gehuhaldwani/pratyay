@@ -1,9 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import config from "@/config.mjs";
+import config from "@/config.js";
 
 import logoImage from "@/assets/logo.jpg";
-import Swiper from "./Swiper.astro";
+import Swiper from "@/components/widget/Swiper.astro";
+
+const slides = [
+	"assets/slides/1.webp",
+	"assets/slides/2.webp",
+	"assets/slides/3.webp",
+	"assets/slides/4.webp",
+	"assets/slides/5.jpg",
+	"assets/slides/6.jpg",
+	"assets/slides/7.jpg",
+	"assets/slides/8.jpg",
+	"assets/slides/9.webp",
+];
 ---
 
 <section
@@ -43,6 +55,6 @@ import Swiper from "./Swiper.astro";
 	class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10 h-50"
 >
 	<div class="w-full">
-		<Swiper />
+		<Swiper slides={slides} />
 	</div>
 </section>

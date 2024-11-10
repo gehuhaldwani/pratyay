@@ -1,12 +1,11 @@
 ---
-import PublishDate from "@/components/blog/PublishDate.astro";
+import PublishDate from "@/components/post/PublishDate.astro";
 import Tag from "@/components/widget/Tag.astro";
-// default image if no image added
 import type { CollectionEntry } from "astro:content";
-import ImageWrapper from "../ImageWrapper.astro";
+import ImageWrapper from "@/components/misc/ImageWrapper.astro";
 
 type Props = {
-	postData: CollectionEntry<"blog">;
+	postData: CollectionEntry<"post">;
 	num: number;
 };
 const { postData, num } = Astro.props;
@@ -29,18 +28,7 @@ const isOdd = num % 2;
 		class="grid grid-cols-1 lg:grid-cols-[200px_auto] md:grid-cols-[200px_auto] gap-10 items-center"
 	>
 		<div class="post_image">
-			<a href={"/blog/" + postData.id}>
-				<!-- <Image
-					src={postData?.data?.image
-						? postData.data.image
-						: defaultImage}
-					width="750"
-					alt={postData.data.title + "Thumbnail"}
-					class:list={[
-						"rounded-[15px] image-shine object-cover h-[200px]",
-						{ "rotate-2": isOdd, "-rotate-2": !isOdd },
-					]}
-				/> -->
+			<a href={"/post/" + postData.id}>
 				{
 					postData?.data?.image && (
 						<ImageWrapper
@@ -57,7 +45,7 @@ const isOdd = num % 2;
 		<div class="post_intro">
 			<h2>
 				<a
-					href={"/blog/" + postData.id}
+					href={"/post/" + postData.id}
 					class="text-pacamara-dark hover:text-pacamara-accent"
 				>
 					{postData.data.title}

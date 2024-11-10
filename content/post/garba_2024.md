@@ -3,8 +3,13 @@ title: "Garba Mahotsav"
 published: 2024-09-26
 description: प्रत्यय - The Cultural Club is bringing an electrifying Garba Mahotsav on 5th October!
 tags:
-    - garba
-image: /images/poster garba 2024.jpg
+  - garba
+image: /images/poster/garba 2024.jpg
+carousel:
+  - /images/events/2024 garba/1.webp
+  - /images/events/2024 garba/2.webp
+  - /images/events/2024 garba/3.webp
+  - /images/events/2024 garba/4.webp
 ---
 
 **Get Ready for Garba Mahotsav!**

@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import Post from "@/components/blog/Post.astro";
-import config from "@/config.mjs";
+import PostCard from "@/components/post/PostCard.astro";
+import config from "@/config.js";
 
 const { postLimit = config.latestPosts, skipPost = "" } = Astro.props;
 
 const posts = (
-	await getCollection("blog", ({ data }) => {
+	await getCollection("post", ({ data }) => {
 		return !(data.title === skipPost);
 	})
 )
@@ -17,7 +17,7 @@ const posts = (
 <section class="container mx-auto max-w-screen-lg px-7 py-10 mb-10">
 	{
 		posts.map((post, index) => {
-			return <Post postData={post} num={index} />;
+			return <PostCard postData={post} num={index} />;
 		})
 	}
 </section>

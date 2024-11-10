@@ -5,7 +5,7 @@ media:
 content:
   - name: posts
     label: Posts
-    path: src/content/blog
+    path: content/post
     type: collection
     format: yaml-frontmatter
     view:
@@ -42,12 +42,57 @@ content:
           required: false,
           options: { input: public/images, output: /images },
         }
+      - {
+          name: carousel,
+          label: Carousel,
+          type: image,
+          list: true,
+          required: false,
+          options: { input: public/images, output: /images },
+        }
       - { name: body, label: Body, type: rich-text, required: true }
   - name: about
     label: About Page
     path: src/content/page/about.md
-    type: file
+    type: rich-text
   - name: config
     label: Site Config
-    path: src/config.mjs
+    path: src/config.json
     type: file
+    format: json
+    fields:
+      - { name: title, label: Site Title, type: string, required: true }
+      - {
+          name: description,
+          label: Site Description,
+          type: string,
+          required: true,
+        }
+      - { name: tagLine, label: Tag Line, type: string, required: true }
+      - {
+          name: defaultOgImage,
+          label: Default Open Graph Image,
+          type: string,
+          default: "./og.jpg",
+        }
+      - { name: latestPosts, label: Latest Posts, type: number, default: 3 }
+      - { name: postsPerPage, label: Posts Per Page, type: number, default: 10 }
+      - {
+          name: social,
+          label: Social Links,
+          type: list,
+          required: false,
+          fields:
+            [
+              { name: facebook, label: Facebook, type: string, default: false },
+              { name: github, label: GitHub, type: string, default: false },
+              {
+                name: instagram,
+                label: Instagram,
+                type: string,
+                default: false,
+              },
+              { name: twitter, label: Twitter, type: string, default: false },
+              { name: whatsapp, label: WhatsApp, type: string, default: false },
+            ],
+        }

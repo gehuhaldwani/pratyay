@@ -6,7 +6,7 @@ published: 2024-10-22T18:30:00.000Z
 draft: false
 tags:
   - grafest
-image: /images/poster student grafest 2024.jpg
+image: /images/poster/student grafest 2024.jpg
 ---
 
 Unleash Your Creativity at Student Grafest 2024

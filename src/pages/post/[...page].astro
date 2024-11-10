@@ -1,22 +1,21 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection, type CollectionEntry } from "astro:content";
-import config from "@/config.mjs";
-
+import config from "@/config.js";
 import Base from "@/layouts/Base.astro";
-import Post from "@/components/blog/Post.astro";
+import PostCard from "@/components/post/PostCard.astro";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-	const blogEntries = (await getCollection("blog")).sort(
+	const postEntries = (await getCollection("post")).sort(
 		(a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
 	);
 
-	return paginate(blogEntries, { pageSize: config.postsPerPage });
+	return paginate(postEntries, { pageSize: config.postsPerPage });
 };
 
 type Props = {
 	page: {
-		data: CollectionEntry<"blog">[];
+		data: CollectionEntry<"post">[];
 		url: {
 			prev: string;
 			next: string;
@@ -30,7 +29,7 @@ const { page } = Astro.props;
 	<section class="container mx-auto max-w-screen-lg px-7 py-10">
 		{
 			page.data.map((post, index) => {
-				return <Post postData={post} num={index} />;
+				return <PostCard postData={post} num={index} />;
 			})
 		}
 		<div class="flex flex-row justify-center gap-7">

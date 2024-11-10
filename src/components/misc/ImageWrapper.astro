@@ -1,0 +1,88 @@
+---
+import path from "node:path";
+import { Image } from "astro:assets";
+
+function joinUrl(...parts: string[]): string {
+	const joined = parts.join("/");
+	return joined.replace(/\/+/g, "/");
+}
+
+function url(path: string) {
+	return joinUrl("", import.meta.env.BASE_URL, path);
+}
+
+interface Props {
+	id?: string;
+	src: string | ImageMetadata;
+	class?: string;
+	alt?: string;
+	position?: string;
+	basePath?: string;
+}
+
+const { id, src, alt, position = "center", basePath = "/" } = Astro.props;
+const className = Astro.props.class;
+
+let image: ImageMetadata | undefined;
+let isLocal = false;
+let isPublic = false;
+
+if (typeof src === "string") {
+	isLocal = !(
+		src.startsWith("/") ||
+		src.startsWith("http") ||
+		src.startsWith("https") ||
+		src.startsWith("data:")
+	);
+	isPublic = src.startsWith("/");
+
+	// TODO temporary workaround for images dynamic import
+	// https://github.com/withastro/astro/issues/3373
+
+	if (isLocal) {
+		const files = import.meta.glob<ImageMetadata>("../../**", {
+			import: "default",
+		});
+		const normalizedPath = path
+			.normalize(path.join("../../", basePath, src))
+			.replace(/\\/g, "/");
+		const file = files[normalizedPath];
+		if (!file) {
+			console.log(normalizedPath);
+			console.error(
+				`\n[ERROR] Image file not found: ${normalizedPath.replace("../../", "src/")}`,
+			);
+		}
+		image = await file();
+	}
+} else {
+	isLocal = true;
+	image = src;
+}
+
+const imageClass = "w-full h-full object-cover";
+const imageStyle = `object-position: ${position}`;
+---
+
+<div id={id} class:list={[className]}>
+	{
+		isLocal && image && (
+			<Image
+				src={image}
+				alt={alt || ""}
+				class={imageClass}
+				style={imageStyle}
+			/>
+		)
+	}
+	{
+		!isLocal && typeof src === "string" && (
+			<img
+				src={isPublic ? url(src) : src}
+				alt={alt || ""}
+				class={imageClass}
+				style={imageStyle}
+			/>
+		)
+	}
+</div>
