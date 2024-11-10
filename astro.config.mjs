@@ -9,10 +9,18 @@ import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.m
 import { InstagramEmbedComponent } from "./src/plugins/rehype-component-instagram.mjs";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 
+import react from "@astrojs/react";
+
 export default defineConfig({
 	site: "https://pratyay.gehuhaldwani.in",
 	base: "/",
-	integrations: [tailwind(), icon()],
+	integrations: [
+		tailwind({
+			applyBaseStyles: false,
+		}),
+		icon(),
+		react(),
+	],
 	markdown: {
 		remarkPlugins: [
 			remarkGithubAdmonitionsToDirectives,

@@ -4,6 +4,7 @@ import config from "@/config.ts";
 
 import logoImage from "@/assets/logo.jpg";
 import Swiper from "@/components/widget/Swiper.astro";
+import { BackgroundLines } from "../ui/background_lines";
 
 const slides = [
 	"assets/slides/1.webp",
@@ -18,38 +19,46 @@ const slides = [
 ];
 ---
 
-<section
-	class="container mx-auto max-w-screen-xl px-7 py-10
+<div class="w-full relative h-full">
+	<BackgroundLines
+		className="top-0 left-0 right-0 flex flex-col justify-center items-center"
+		client:load
+	>
+		<section
+			class="container mx-auto max-w-screen-xl px-7 py-10
         lg:min-h-[500px] content-center font-pacamara
         prose lg:prose-xl
         prose-headings:font-pacamara-space prose-headings:mt-5 prose-headings:text-pacamara-dark prose-headings:font-bold lg:prose-h1:text-7xl prose-h1:mt-0 prose-heading:transition-all prose-heading:duration-300
         prose-p:text-pacamara-primary/50 dark:prose-p:text-white/70 prose-p:mb-0 prose-p:transition-all prose-p:duration-300
         prose-img:mt-0 prose-img:mb-0
         dark:prose-headings:text-white"
->
-	<div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4">
-		<div class="col-span-1 flex content-center justify-center">
-			<Image
-				src={logoImage}
-				width={200}
-				alt=""
-				loading="eager"
-				decoding="sync"
-				class="relative w-[150px] lg:w-[220px] rounded-[15px] image-shine"
-			/>
-		</div>
-		<div class="col-span-3">
-			<h1>
-				<span class="gradient-underline">
-					<span class="sm:text-center text-left"
-						>{config.tagLine}</span
-					>
-				</span>
-			</h1>
-		</div>
-	</div>
-	<p>{config.description}</p>
-</section>
+		>
+			<div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4">
+				<div class="col-span-1 flex content-center justify-center">
+					<Image
+						src={logoImage}
+						width={200}
+						height={200}
+						alt=""
+						loading="eager"
+						decoding="sync"
+						class="relative w-[200px] h-[200px] rounded-[15px] image-shine"
+					/>
+				</div>
+				<div class="col-span-3 content-center w-full">
+					<h1 class="w-full">
+						<span class="gradient-underline w-full">
+							<span class="w-full text-center"
+								>{config.tagLine}</span
+							>
+						</span>
+					</h1>
+				</div>
+			</div>
+			<p class="w-full text-center">{config.description}</p>
+		</section>
+	</BackgroundLines>
+</div>
 
 <section
 	class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10 h-50"
