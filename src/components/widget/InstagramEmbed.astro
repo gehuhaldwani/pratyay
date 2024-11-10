@@ -1,0 +1,37 @@
+---
+interface Props {
+	url: string;
+	class?: string;
+}
+
+const { url } = Astro.props;
+const className = Astro.props.class;
+
+const regExp = /(?:https?:\/\/www\.)?instagram\.com\S*?\/p\/(\w{11})\/?/;
+const match = url.match(regExp);
+
+if (!match) {
+	return;
+}
+
+const requestUrl = `https://www.instagram.com/p/${match[1]}`;
+
+const response = await fetch(
+	`https://www.instagram.com/api/v1/oembed/?url=${requestUrl}&hidecaption=1`,
+	{
+		headers: {
+			"Content-Type": "application/json",
+		},
+	},
+);
+
+if (!response.ok) {
+	return;
+}
+
+const data = await response.json();
+---
+
+<div class="instagram-embed">
+	<div set:html={data.html} class={className} />
+</div>

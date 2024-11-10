@@ -7,6 +7,7 @@ draft: false
 tags:
   - grafest
 image: /images/poster/student grafest 2024.jpg
+instagramEmbed: https://www.instagram.com/p/DBX1co0vkXZ
 ---
 
 Unleash Your Creativity at Student Grafest 2024
@@ -17,17 +18,19 @@ Get ready to showcase your talents and passion at the biggest annual student
 competition, Student Grafest 2024. This is your chance to shine, connect with
 fellow students, and transform your dreams into reality.
 
-#### When:
-
-October 21-22, 2024
-
-#### Where:
-
-Multi Purpose Hall, GEHU, Haldwani
-
-#### Time:
-
-10:00 AM onwards
+> [!IMPORTANT]
+>
+> #### When:
+>
+> October 21-22, 2024
+>
+> #### Where:
+>
+> Multi Purpose Hall, GEHU, Haldwani
+>
+> #### Time:
+>
+> 10:00 AM onwards
 
 ### Auditions for:
 
@@ -39,9 +42,13 @@ Multi Purpose Hall, GEHU, Haldwani
 
 ### Registration:
 
-Register now by scanning the QR code in the creative and contact +91 96311 06797
-(Mr. Sandeep Abhishek, Asst. Prof., Media &Mass Communication) in case of any
-query or confusion.
+Register now by scanning the QR code in the creative.
+
+> [!NOTE]
+> In case of any query or confusion contact\
+> +91 96311 06797\
+> **Mr. Sandeep Abhishek**\
+> Asst. Prof Media & Mass Communication
 
 Don't miss this incredible opportunity to be part of something extraordinary.
 Unleash your creativity, showcase your skills, and make your mark at Student
