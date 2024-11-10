@@ -2,19 +2,13 @@
 import Base from "@/layouts/Base.astro";
 import Welcome from "@/components/home/Welcome.astro";
 import LatestPosts from "@/components/post/LatestPosts.astro";
+import CentredButton from "@/components/widget/CentredButton.astro";
 ---
 
 <Base>
 	<main>
 		<Welcome />
 		<LatestPosts />
-		<div class="flex flex-row justify-center gap-7 mb-10">
-			<a
-				href={"/post/"}
-				class="text-[16px] bg-transparent border-pacamara-secondary border-[1px] leading-none rounded-full py-3 px-5 text-pacamara-secondary hover:bg-pacamara-accent hover:border-pacamara-accent hover:text-pacamara-white transition-all duration-300"
-			>
-				All Posts
-			</a>
-		</div>
+		<CentredButton text="All Posts" href="/post/" />
 	</main>
 </Base>

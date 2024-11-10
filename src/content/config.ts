@@ -13,6 +13,7 @@ const postCollection = defineCollection({
 		image: z.string().optional(),
 		carousel: z.array(z.string()).optional().default([]),
 		instagramEmbed: z.string().optional(),
+		imagesDownloadUrl: z.string().optional(),
 	}),
 });
 

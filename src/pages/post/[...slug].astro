@@ -8,6 +8,7 @@ import ImageWrapper from "@/components/misc/ImageWrapper.astro";
 import Swiper from "@/components/widget/Swiper.astro";
 import Markdown from "@/components/post/Markdown.astro";
 import InstagramEmbed from "@/components/widget/InstagramEmbed.astro";
+import CentredButton from "@/components/widget/CentredButton.astro";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("post", ({ data }) => {
@@ -21,6 +22,8 @@ export async function getStaticPaths() {
 
 const post = Astro.props;
 const { Content } = await render(post);
+
+console.log(post.data.imagesDownloadUrl);
 ---
 
 <Base
@@ -68,6 +71,14 @@ const { Content } = await render(post);
 					<Swiper slides={post.data.carousel} />
 				</div>
 			</section>
+		)
+	}
+	{
+		post.data.imagesDownloadUrl && (
+			<CentredButton
+				text="Download Images"
+				href={post.data.imagesDownloadUrl}
+			/>
 		)
 	}
 

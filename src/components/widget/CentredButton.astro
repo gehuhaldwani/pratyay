@@ -1,0 +1,23 @@
+---
+interface Props {
+	href: string;
+	text: string;
+}
+
+const { href, text } = Astro.props;
+
+let target = "_self";
+if (href.startsWith("http")) {
+	target = "_blank";
+}
+---
+
+<div class="flex flex-row justify-center gap-7 mb-10">
+	<a
+		href={href}
+		target={target}
+		class="text-[16px] bg-transparent border-pacamara-secondary border-[1px] leading-none rounded-full py-3 px-5 text-pacamara-secondary hover:bg-pacamara-accent hover:border-pacamara-accent hover:text-pacamara-white transition-all duration-300"
+	>
+		{text}
+	</a>
+</div>

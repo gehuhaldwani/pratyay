@@ -11,6 +11,7 @@ carousel:
   - /images/events/2024 garba/3.webp
   - /images/events/2024 garba/4.webp
 instagramEmbed: https://www.instagram.com/p/DAX1cQzPxia
+imagesDownloadUrl: https://1drv.ms/f/c/eb614ff291e0d527/EuA4aBqkGIBPvdA1wvp1T6ABsh688EgogtoD9Ulk4kzoYg
 ---
 
 **Get Ready for Garba Mahotsav!**
@@ -42,9 +43,3 @@ President **Vivek Singh Bisht**\
 Let’s dance, laugh, and make unforgettable memories together!
 
 **#GarbaMahotsav #GEUEvents #CulturalVibes #CelebrateTogether #GarbaNight**
-
-:::note[Download Pics]
-
-[Download](https://1drv.ms/f/c/eb614ff291e0d527/EuA4aBqkGIBPvdA1wvp1T6ABsh688EgogtoD9Ulk4kzoYg)
-
-:::

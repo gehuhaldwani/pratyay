@@ -50,6 +50,10 @@ content:
         label: Instagram Post Embed
         type: string
         required: false
+      - name: imagesDownloadUrl
+        label: Images Download URL
+        type: string
+        required: false
       - name: image
         label: Cover Image
         type: image
