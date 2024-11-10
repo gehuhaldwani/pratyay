@@ -54,7 +54,7 @@ content:
   - name: about
     label: About Page
     path: src/content/page/about.md
-    type: rich-text
+    type: file
   - name: config
     label: Site Config
     path: src/config.json
@@ -80,7 +80,7 @@ content:
       - {
           name: social,
           label: Social Links,
-          type: list,
+          list: true,
           required: false,
           fields:
             [
