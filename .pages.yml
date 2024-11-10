@@ -85,15 +85,14 @@ content:
           type: object,
           fields:
             [
-              { name: facebook, label: Facebook, type: string, default: false },
-              { name: github, label: GitHub, type: string, default: false },
+              { name: facebook, label: Facebook, type: string },
+              { name: github, label: GitHub, type: string },
               {
                 name: instagram,
                 label: Instagram,
                 type: string,
-                default: false,
               },
-              { name: twitter, label: Twitter, type: string, default: false },
-              { name: whatsapp, label: WhatsApp, type: string, default: false },
+              { name: twitter, label: Twitter, type: string },
+              { name: whatsapp, label: WhatsApp, type: string },
             ],
         }
