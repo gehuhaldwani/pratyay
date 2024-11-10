@@ -17,82 +17,107 @@ content:
         sort: published
         order: desc
     fields:
-      - { name: title, label: Title, type: string, required: true }
-      - { name: description, label: Description, type: string, required: true }
-      - {
-          name: published,
-          label: Published Date,
-          type: date,
-          required: true,
-          options: { time: true, format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z' },
-        }
-      - {
-          name: draft,
-          label: Draft,
-          type: boolean,
-          required: false,
-          default: false,
-        }
-      - { name: category, label: Category, type: string, required: false }
-      - { name: tags, label: Tags, type: string, list: true, required: false }
-      - {
-          name: image,
-          label: Cover Image,
-          type: image,
-          required: false,
-          options: { input: public/images, output: /images },
-        }
-      - {
-          name: carousel,
-          label: Carousel,
-          type: image,
-          list: true,
-          required: false,
-          options: { input: public/images, output: /images },
-        }
-      - { name: body, label: Body, type: rich-text, required: true }
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: string
+        required: true
+      - name: published
+        label: Published Date
+        type: date
+        required: true
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+      - name: draft
+        label: Draft
+        type: boolean
+        required: false
+        default: false
+      - name: category
+        label: Category
+        type: string
+        required: false
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        required: false
+      - name: image
+        label: Cover Image
+        type: image
+        required: false
+        options:
+          input: public/images
+          output: /images
+      - name: carousel
+        label: Carousel
+        type: image
+        list: true
+        required: false
+        options:
+          input: public/images
+          output: /images
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+
   - name: about
     label: About Page
     path: src/content/page/about.md
     type: file
+
   - name: config
     label: Site Config
     path: src/config.json
     type: file
     format: json
     fields:
-      - { name: title, label: Site Title, type: string, required: true }
-      - {
-          name: description,
-          label: Site Description,
-          type: string,
-          required: true,
-        }
-      - { name: tagLine, label: Tag Line, type: string, required: true }
-      - {
-          name: defaultOgImage,
-          label: Default Open Graph Image,
-          type: string,
-          default: "./og.jpg",
-        }
-      - { name: latestPosts, label: Latest Posts, type: number, default: 3 }
-      - { name: postsPerPage, label: Posts Per Page, type: number, default: 10 }
-      - {
-          name: social,
-          label: Social Links,
-          list: true,
-          required: true,
-          type: object,
-          fields:
-            [
-              { name: facebook, label: Facebook, type: string },
-              { name: github, label: GitHub, type: string },
-              {
-                name: instagram,
-                label: Instagram,
-                type: string,
-              },
-              { name: twitter, label: Twitter, type: string },
-              { name: whatsapp, label: WhatsApp, type: string },
-            ],
-        }
+      - name: title
+        label: Site Title
+        type: string
+        required: true
+      - name: description
+        label: Site Description
+        type: string
+        required: true
+      - name: tagLine
+        label: Tag Line
+        type: string
+        required: true
+      - name: defaultOgImage
+        label: Default Open Graph Image
+        type: string
+        default: "./og.jpg"
+      - name: latestPosts
+        label: Latest Posts
+        type: number
+        default: 3
+      - name: postsPerPage
+        label: Posts Per Page
+        type: number
+        default: 10
+      - name: social
+        label: Social Links
+        required: true
+        type: object
+        fields:
+          - name: facebook
+            label: Facebook
+            type: string
+          - name: github
+            label: GitHub
+            type: string
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: twitter
+            label: Twitter
+            type: string
+          - name: whatsapp
+            label: WhatsApp
+            type: string
