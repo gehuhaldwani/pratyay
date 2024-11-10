@@ -46,6 +46,10 @@ content:
         type: string
         list: true
         required: false
+      - name: instagramEmbed
+        label: Instagram Post Embed
+        type: string
+        required: false
       - name: image
         label: Cover Image
         type: image
