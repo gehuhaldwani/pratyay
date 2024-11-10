@@ -18,19 +18,23 @@ Get ready to showcase your talents and passion at the biggest annual student
 competition, Student Grafest 2024. This is your chance to shine, connect with
 fellow students, and transform your dreams into reality.
 
-> [!IMPORTANT]
->
-> #### When:
->
-> October 21-22, 2024
->
-> #### Where:
->
-> Multi Purpose Hall, GEHU, Haldwani
->
-> #### Time:
->
-> 10:00 AM onwards
+:::important[When]
+
+October 21-22, 2024
+
+:::
+
+:::note[Where]
+
+Multi Purpose Hall, GEHU, Haldwani
+
+:::
+
+:::tip[Time]
+
+10:00 AM onwards
+
+:::
 
 ### Auditions for:
 
