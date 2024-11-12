@@ -197,7 +197,7 @@ content:
         options:
           input: public/images/members
           output: /images/members/
-        default: "/images/members/default.jpg"
+        default: "/images/members/default.png"
       - name: social
         label: Social Links
         type: object
