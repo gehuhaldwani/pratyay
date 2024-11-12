@@ -39,10 +39,12 @@ const { post } = Astro.props;
 		</div>
 		{
 			post.data.image && (
-				<ImageWrapper
-					src={post.data.image}
-					class="block relative mx-auto mt-10 object-cover h-full max-w-screen-md image-shine rounded-[15px]"
-				/>
+				<div transition:name={post.id}>
+					<ImageWrapper
+						src={post.data.image}
+						class="block relative mx-auto mt-10 object-cover h-full max-w-screen-md image-shine rounded-[15px]"
+					/>
+				</div>
 			)
 		}
 		<Markdown>

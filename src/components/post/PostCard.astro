@@ -31,13 +31,16 @@ const isOdd = num % 2;
 			<a href={"/post/" + postData.id}>
 				{
 					postData?.data?.image && (
-						<ImageWrapper
-							src={postData.data.image}
-							class:list={[
-								"rounded-[15px] image-shine object-cover h-[200px]",
-								{ "rotate-2": isOdd, "-rotate-2": !isOdd },
-							]}
-						/>
+						<div transition:name={postData.id}>
+							{" "}
+							<ImageWrapper
+								src={postData.data.image}
+								class:list={[
+									"rounded-[15px] image-shine object-cover h-[200px]",
+									{ "rotate-2": isOdd, "-rotate-2": !isOdd },
+								]}
+							/>
+						</div>
 					)
 				}
 			</a>

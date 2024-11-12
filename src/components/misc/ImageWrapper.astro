@@ -64,25 +64,25 @@ const imageClass = "w-full h-full object-cover";
 const imageStyle = `object-position: ${position}`;
 ---
 
-<div id={id} class:list={[className]}>
-	{
-		isLocal && image && (
-			<Image
-				src={image}
-				alt={alt || ""}
-				class={imageClass}
-				style={imageStyle}
-			/>
-		)
-	}
-	{
-		!isLocal && typeof src === "string" && (
-			<img
-				src={isPublic ? url(src) : src}
-				alt={alt || ""}
-				class={imageClass}
-				style={imageStyle}
-			/>
-		)
-	}
-</div>
+{
+	isLocal && image && (
+		<Image
+			id={id}
+			src={image}
+			alt={alt || ""}
+			class:list={[className, imageClass]}
+			style={imageStyle}
+		/>
+	)
+}
+{
+	!isLocal && typeof src === "string" && (
+		<img
+			id={id}
+			src={isPublic ? url(src) : src}
+			alt={alt || ""}
+			class:list={[className, imageClass]}
+			style={imageStyle}
+		/>
+	)
+}
