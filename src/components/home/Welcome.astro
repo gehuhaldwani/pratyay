@@ -3,8 +3,9 @@ import { Image } from "astro:assets";
 import config from "@/config.ts";
 
 import logoImage from "@/assets/logo.jpg";
-import Swiper from "@/components/widget/Swiper.astro";
+
 import { BackgroundLines } from "../ui/background_lines";
+import ImageCarousel from "../widget/ImageCarousel.astro";
 
 const slides = [
 	"assets/slides/1.webp",
@@ -62,6 +63,6 @@ const slides = [
 	class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10 h-50"
 >
 	<div class="w-full">
-		<Swiper slides={slides} />
+		<ImageCarousel slides={slides} />
 	</div>
 </section>

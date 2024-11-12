@@ -1,0 +1,15 @@
+{
+	"members": [
+		{
+			"role": "president",
+			"name": "Vivek Singh Bisht",
+			"course": "BCA",
+			"sem": 5,
+			"image": "https://www.w3schools.com/w3images/team2.jpg",
+			"socials": {
+				"instagram": "https://www.instagram.com/vivek_singh_bisht_/",
+				"whatsapp": "https://wa.me/919412345678"
+			}
+		}
+	]
+}
