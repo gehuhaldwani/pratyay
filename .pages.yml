@@ -107,15 +107,24 @@ content:
         label: Latest Posts
         type: number
         default: 3
+        options:
+          min: 1
+          max: 10
       - name: postsPerPage
         label: Posts Per Page
         type: number
         default: 10
+        options:
+          min: 1
+          max: 20
       - name: social
         label: Social Links
         required: true
         type: object
         fields:
+          - name: _
+            default: _
+            hidden: true
           - name: discord
             label: Discord
             type: string
@@ -204,6 +213,9 @@ content:
         type: object
         required: true
         fields:
+          - name: _
+            default: _
+            hidden: true
           - name: discord
             label: Discord
             type: string
