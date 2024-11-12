@@ -152,6 +152,7 @@ content:
         label: Members
         list: true
         required: true
+        type: object
         fields:
           - name: role
             label: Role
