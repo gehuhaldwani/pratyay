@@ -1,0 +1,37 @@
+---
+import Base from "@/layouts/Base.astro";
+import ImageWrapper from "@/components/misc/ImageWrapper.astro";
+import Markdown from "@/components/post/Markdown.astro";
+
+type Props = {
+	title?: string;
+	description?: string;
+	image?: string;
+};
+const { title, description, image } = Astro.props;
+---
+
+<Base title={title} description={description} image={image}>
+	<article class="px-7 pt-10 mx-auto w-full">
+		<div
+			class="mx-auto
+      prose lg:prose-xl prose-headings:font-bold prose-headings:text-pacamara-dark prose-headings:mb-3"
+		>
+			<h1 class="transition-all duration-300 dark:text-white">
+				{title}
+			</h1>
+		</div>
+		{
+			image && (
+				<ImageWrapper
+					src={image}
+					class="block relative mx-auto mt-10 object-cover h-full max-w-screen-md image-shine rounded-[15px]"
+				/>
+			)
+		}
+
+		<Markdown>
+			<slot />
+		</Markdown>
+	</article>
+</Base>

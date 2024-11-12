@@ -1,21 +1,30 @@
 ---
-import type { SocialLinks } from "@/types/socials";
+import type { Socials } from "@/types/socials";
 import SocialIcon from "@/components/widget/SocialIcon.astro";
 
 interface Props {
-	social: SocialLinks;
+	socials: Socials;
+	class?: string;
 }
 
-const { social } = Astro.props;
+const { socials } = Astro.props;
+const className = Astro.props.class;
 ---
 
-<SocialIcon socialUrl={social?.discord} socialType="discord" />
-<SocialIcon socialUrl={social?.facebook} socialType="facebook" />
-<SocialIcon socialUrl={social?.github} socialType="github" />
-<SocialIcon socialUrl={social?.instagram} socialType="instagram" />
-<SocialIcon socialUrl={social?.linkedin} socialType="linkedin" />
-<SocialIcon socialUrl={social?.linktree} socialType="linktree" />
-<SocialIcon socialUrl={social?.telegram} socialType="telegram" />
-<SocialIcon socialUrl={social?.twitter} socialType="twitter" />
-<SocialIcon socialUrl={social?.whatsapp} socialType="whatsapp" />
-<SocialIcon socialUrl={social?.youtube} socialType="youtube" />
+<ul
+	class:list={[
+		"not-prose list-none text-[14px] font-normal flex flex-initial flex-row content-center items-center gap-x-[35px]",
+		className,
+	]}
+>
+	<SocialIcon socialUrl={socials?.discord} socialType="discord" />
+	<SocialIcon socialUrl={socials?.facebook} socialType="facebook" />
+	<SocialIcon socialUrl={socials?.github} socialType="github" />
+	<SocialIcon socialUrl={socials?.instagram} socialType="instagram" />
+	<SocialIcon socialUrl={socials?.linkedin} socialType="linkedin" />
+	<SocialIcon socialUrl={socials?.linktree} socialType="linktree" />
+	<SocialIcon socialUrl={socials?.telegram} socialType="telegram" />
+	<SocialIcon socialUrl={socials?.twitter} socialType="twitter" />
+	<SocialIcon socialUrl={socials?.whatsapp} socialType="whatsapp" />
+	<SocialIcon socialUrl={socials?.youtube} socialType="youtube" />
+</ul>

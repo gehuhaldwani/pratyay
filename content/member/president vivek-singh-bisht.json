@@ -3,8 +3,9 @@
 	"name": "Vivek Singh Bisht",
 	"course": "BCA",
 	"sem": 5,
-	"image": "/images/members/default.png",
+	"image": "/images/members/vivek_singh_bisht.png",
 	"socials": {
-		"_": "_"
+		"_": "_",
+		"instagram": "https://www.instagram.com/"
 	}
 }

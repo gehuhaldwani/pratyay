@@ -159,7 +159,7 @@ content:
     icon: users
     format: json
     path: content/member
-    filename: "{fields.role} {fields.name}.json"
+    filename: "{fields.role}_{fields.name}.json"
     view:
       fields: [role, name, course, sem, image]
       primary: name

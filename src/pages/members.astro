@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import type { Member } from "@/types/member";
+import MemberCard from "@/components/widget/MemberCard.astro";
+import PageLayout from "@/layouts/PageLayout.astro";
+
+const memberEntries = await getCollection("member");
+
+const members: Member[] = memberEntries.map((entry) => {
+	return entry.data;
+});
+
+members.sort((a, b) => {
+	if (a.role > b.role) return 1;
+	if (b.role > a.role) return -1;
+
+	if (a.name > b.name) return 1;
+	if (b.name > a.name) return -1;
+
+	return 0;
+});
+
+console.log(members);
+---
+
+<PageLayout title="Members">
+	<h1>Student Council Members</h1>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+		{members.map((member) => <MemberCard member={member} />)}
+		{members.map((member) => <MemberCard member={member} />)}
+		{members.map((member) => <MemberCard member={member} />)}
+		{members.map((member) => <MemberCard member={member} />)}
+	</div>
+</PageLayout>
