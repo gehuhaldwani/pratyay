@@ -33,8 +33,8 @@ const slides = [
         prose-img:mt-0 prose-img:mb-0
         dark:prose-headings:text-white"
 		>
-			<div class="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-4">
-				<div class="col-span-1 flex content-center justify-center">
+			<div class="grid grid-cols-1 md:gap-4 md:grid-cols-4">
+				<div class="col-span-1 flex justify-center items-center w-full">
 					<Image
 						src={logoImage}
 						width={200}
@@ -45,12 +45,10 @@ const slides = [
 						class="relative w-[200px] h-[200px] rounded-[15px] image-shine"
 					/>
 				</div>
-				<div class="col-span-3 content-center w-full">
-					<h1 class="w-full">
-						<span class="gradient-underline w-full">
-							<span class="w-full text-center"
-								>{config.tagLine}</span
-							>
+				<div class="col-span-3 w-full flex items-center justify-center">
+					<h1 class="w-full items-center text-center md:text-left">
+						<span class="gradient-underline">
+							<span>{config.tagLine}</span>
 						</span>
 					</h1>
 				</div>

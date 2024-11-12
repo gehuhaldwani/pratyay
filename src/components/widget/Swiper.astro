@@ -33,6 +33,7 @@ const { slides } = Astro.props;
 	.swiper-container {
 		width: 100%;
 		height: 100%;
+		user-select: none;
 	}
 
 	.swiper-slide {
@@ -60,12 +61,10 @@ const { slides } = Astro.props;
 	let swiper: Swiper;
 
 	function initSwiper() {
-		console.log("initSwiper");
 		swiper = new Swiper(".swiper-container", {
 			spaceBetween: 18,
 			slidesPerView: 3,
 			loop: true,
-			freeMode: true,
 		});
 		resizeSwiper();
 	}
