@@ -7,7 +7,7 @@ interface SiteConfig {
 	defaultOgImage: string;
 	latestPosts: number;
 	postsPerPage: number;
-	social: Socials;
+	socials: Socials;
 }
 
 export type { SiteConfig };

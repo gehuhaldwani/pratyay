@@ -5,7 +5,7 @@
 	"defaultOgImage": "./og.jpg",
 	"latestPosts": 3,
 	"postsPerPage": 10,
-	"social": {
+	"socials": {
 		"instagram": "https://www.instagram.com/pratyay_gehu_haldwani/",
 		"whatsapp": "https://chat.whatsapp.com/Ce23OK8YCRv2QN16npS3lz"
 	}
