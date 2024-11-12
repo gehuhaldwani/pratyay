@@ -9,7 +9,7 @@ import { h } from "hastscript";
  * @returns {Promise<import('hast').Element>} The created Instagram embed component.
  */
 export function InstagramEmbedComponent(properties) {
-	const regExp = /(?:https?:\/\/www\.)?instagram\.com\S*?\/p\/(\w{11})\/?/;
+	const regExp = /(?:https?:\/\/www\.)?instagram\.com\S*?\/p\/([\w-]{11})\/?/;
 	const match = properties.url.match(regExp);
 
 	if (!match) {
