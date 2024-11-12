@@ -114,6 +114,9 @@ content:
         required: true
         type: object
         fields:
+          - name: discord
+            label: Discord
+            type: string
           - name: facebook
             label: Facebook
             type: string
@@ -123,9 +126,18 @@ content:
           - name: instagram
             label: Instagram
             type: string
+          - name: linkedin
+            label: LinkedIn
+            type: string
+          - name: linktree
+            label: Linktree
+            type: string
           - name: twitter
             label: Twitter
             type: string
           - name: whatsapp
             label: WhatsApp
+            type: string
+          - name: youtube
+            label: YouTube
             type: string

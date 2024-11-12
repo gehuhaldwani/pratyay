@@ -6,10 +6,15 @@
 	"latestPosts": 3,
 	"postsPerPage": 10,
 	"social": {
+		"discord": false,
 		"facebook": false,
 		"github": false,
 		"instagram": "https://www.instagram.com/pratyay_gehu_haldwani/",
+		"linkedin": false,
+		"linktree": false,
+		"telegram": false,
 		"twitter": false,
-		"whatsapp": "https://chat.whatsapp.com/Ce23OK8YCRv2QN16npS3lz"
+		"whatsapp": "https://chat.whatsapp.com/Ce23OK8YCRv2QN16npS3lz",
+		"youtube": false
 	}
 }
