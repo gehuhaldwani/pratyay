@@ -150,7 +150,7 @@ content:
     icon: users
     format: json
     path: content/member
-    filename: "{fields.role} {fileds.name}.json"
+    filename: "{fields.role} {fields.name}.json"
     view:
       fields: [role, name, course, sem, image]
       primary: name
@@ -196,11 +196,13 @@ content:
         type: image
         options:
           input: public/images/members
-          output: /images/members/
-        default: "/images/members/default.png"
+          output: /images/members
+        default: /images/members/default.png
+        required: true
       - name: social
         label: Social Links
         type: object
+        required: true
         fields:
           - name: discord
             label: Discord
