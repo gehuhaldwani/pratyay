@@ -1,4 +1,4 @@
-import type { SocialLinks } from "@/types/social";
+import type { Socials } from "@/types/socials";
 
 interface SiteConfig {
 	title: string;
@@ -7,7 +7,7 @@ interface SiteConfig {
 	defaultOgImage: string;
 	latestPosts: number;
 	postsPerPage: number;
-	social: SocialLinks;
+	social: Socials;
 }
 
 export type { SiteConfig };

@@ -1,4 +1,4 @@
-import type { SocialLinks } from "@/types/social";
+import type { Socials } from "@/types/socials";
 
 interface Member {
 	role: string;
@@ -6,7 +6,21 @@ interface Member {
 	course: string;
 	sem: number;
 	image: string;
-	socials: SocialLinks;
+	socials: Socials;
 }
 
 export type { Member };
+
+import { z } from "astro:content";
+import { socialsZodSchema } from "@/types/socials";
+
+const memberZodSchema: z.ZodType<Member> = z.object({
+	role: z.string(),
+	name: z.string(),
+	course: z.string(),
+	sem: z.number(),
+	image: z.string(),
+	socials: socialsZodSchema,
+});
+
+export { memberZodSchema };

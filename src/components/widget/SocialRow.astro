@@ -1,0 +1,21 @@
+---
+import type { SocialLinks } from "@/types/socials";
+import SocialIcon from "@/components/widget/SocialIcon.astro";
+
+interface Props {
+	social: SocialLinks;
+}
+
+const { social } = Astro.props;
+---
+
+<SocialIcon socialUrl={social?.discord} socialType="discord" />
+<SocialIcon socialUrl={social?.facebook} socialType="facebook" />
+<SocialIcon socialUrl={social?.github} socialType="github" />
+<SocialIcon socialUrl={social?.instagram} socialType="instagram" />
+<SocialIcon socialUrl={social?.linkedin} socialType="linkedin" />
+<SocialIcon socialUrl={social?.linktree} socialType="linktree" />
+<SocialIcon socialUrl={social?.telegram} socialType="telegram" />
+<SocialIcon socialUrl={social?.twitter} socialType="twitter" />
+<SocialIcon socialUrl={social?.whatsapp} socialType="whatsapp" />
+<SocialIcon socialUrl={social?.youtube} socialType="youtube" />

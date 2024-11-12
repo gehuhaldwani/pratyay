@@ -75,12 +75,14 @@ content:
         required: true
 
   - name: about
+    icon: info
     label: About Page
     path: src/content/page/about.md
     type: file
 
   - name: config
     label: Site Config
+    icon: bolt
     path: src/data/config.json
     type: file
     format: json
@@ -144,67 +146,86 @@ content:
 
   - name: members
     label: Members
-    type: file
+    type: collection
+    icon: users
     format: json
-    path: src/data/members.json
+    path: content/member
+    filename: "{fields.role} {fileds.name}.json"
+    view:
+      fields: [role, name, course, sem, image]
+      primary: name
+      sort: [role]
+      default:
+        search: ""
+        sort: role
+        order: asc
     fields:
-      - name: members
-        label: Members
-        list: true
+      - name: role
+        label: Role
+        type: select
+        options:
+          values:
+            [
+              president,
+              vice-president,
+              secretary,
+              joint-secretary,
+              treasurer,
+              media-liaison,
+              head-flagger,
+              member,
+            ]
         required: true
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: course
+        label: Course
+        type: string
+        required: true
+      - name: sem
+        label: Semester
+        type: number
+        required: true
+        options:
+          min: 1
+          max: 10
+      - name: image
+        label: Image
+        type: image
+        options:
+          input: public/images/members
+          output: /images/members/
+        default: "/images/members/default.jpg"
+      - name: social
+        label: Social Links
         type: object
         fields:
-          - name: role
-            label: Role
+          - name: discord
+            label: Discord
             type: string
-            required: true
-          - name: name
-            label: Name
+          - name: facebook
+            label: Facebook
             type: string
-            required: true
-          - name: course
-            label: Course
+          - name: github
+            label: GitHub
             type: string
-            required: true
-          - name: sem
-            label: Semester
-            type: number
-            required: true
-          - name: image
-            label: Image
-            type: image
-            required: true
-            options:
-              input: public/images
-              output: /images
-          - name: social
-            label: Social Links
-            type: object
-            fields:
-              - name: discord
-                label: Discord
-                type: string
-              - name: facebook
-                label: Facebook
-                type: string
-              - name: github
-                label: GitHub
-                type: string
-              - name: instagram
-                label: Instagram
-                type: string
-              - name: linkedin
-                label: LinkedIn
-                type: string
-              - name: linktree
-                label: Linktree
-                type: string
-              - name: twitter
-                label: Twitter
-                type: string
-              - name: whatsapp
-                label: WhatsApp
-                type: string
-              - name: youtube
-                label: YouTube
-                type: string
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: linkedin
+            label: LinkedIn
+            type: string
+          - name: linktree
+            label: Linktree
+            type: string
+          - name: twitter
+            label: Twitter
+            type: string
+          - name: whatsapp
+            label: WhatsApp
+            type: string
+          - name: youtube
+            label: YouTube
+            type: string
