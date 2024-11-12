@@ -4,11 +4,11 @@ import LatestPosts from "@/components/post/LatestPosts.astro";
 import PublishDate from "@/components/post/PublishDate.astro";
 import Tag from "@/components/widget/Tag.astro";
 import ImageWrapper from "@/components/misc/ImageWrapper.astro";
-import Swiper from "@/components/widget/Swiper.astro";
 import Markdown from "@/components/post/Markdown.astro";
 import InstagramEmbed from "@/components/widget/InstagramEmbed.astro";
 import CentredButton from "@/components/widget/CentredButton.astro";
 import type { CollectionEntry } from "astro:content";
+import ImageCarousel from "@/components/widget/ImageCarousel.astro";
 
 interface Props {
 	post: CollectionEntry<"post">;
@@ -61,7 +61,7 @@ const { post } = Astro.props;
 		post.data.carousel && (
 			<section class="my-10 flex justify-center gap-5 overflow-hidden py-4 sm:gap-10 h-50">
 				<div class="w-full">
-					<Swiper slides={post.data.carousel} />
+					<ImageCarousel slides={post.data.carousel} />
 				</div>
 			</section>
 		)

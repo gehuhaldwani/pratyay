@@ -1,5 +1,6 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
+import { memberZodSchema } from "@/types/member";
 
 const postCollection = defineCollection({
 	loader: glob({ pattern: "**/[^_]*.md", base: "./content/post" }),
@@ -17,6 +18,11 @@ const postCollection = defineCollection({
 	}),
 });
 
+const memberCollection = defineCollection({
+	loader: glob({ pattern: "**/[^_]*.json", base: "./content/member" }),
+	schema: memberZodSchema,
+});
+
 const pageCollection = defineCollection({
 	loader: glob({ pattern: "**/[^_]*.md", base: "./src/content/page" }),
 	schema: z.object({
@@ -29,4 +35,5 @@ const pageCollection = defineCollection({
 export const collections = {
 	post: postCollection,
 	page: pageCollection,
+	member: memberCollection,
 };

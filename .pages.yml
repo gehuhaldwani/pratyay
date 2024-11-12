@@ -75,13 +75,15 @@ content:
         required: true
 
   - name: about
+    icon: info
     label: About Page
     path: src/content/page/about.md
     type: file
 
   - name: config
     label: Site Config
-    path: src/config.json
+    icon: bolt
+    path: src/data/config.json
     type: file
     format: json
     fields:
@@ -105,15 +107,115 @@ content:
         label: Latest Posts
         type: number
         default: 3
+        options:
+          min: 1
+          max: 10
       - name: postsPerPage
         label: Posts Per Page
         type: number
         default: 10
-      - name: social
-        label: Social Links
+        options:
+          min: 1
+          max: 20
+      - name: socials
+        label: Socials
         required: true
         type: object
         fields:
+          - name: _
+            default: _
+            hidden: true
+          - name: discord
+            label: Discord
+            type: string
+          - name: facebook
+            label: Facebook
+            type: string
+          - name: github
+            label: GitHub
+            type: string
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: linkedin
+            label: LinkedIn
+            type: string
+          - name: linktree
+            label: Linktree
+            type: string
+          - name: twitter
+            label: Twitter
+            type: string
+          - name: whatsapp
+            label: WhatsApp
+            type: string
+          - name: youtube
+            label: YouTube
+            type: string
+
+  - name: members
+    label: Members
+    type: collection
+    icon: users
+    format: json
+    path: content/member
+    filename: "{fields.role}_{fields.name}.json"
+    view:
+      fields: [role, name, course, sem, image]
+      primary: name
+      sort: [role]
+      default:
+        search: ""
+        sort: role
+        order: asc
+    fields:
+      - name: role
+        label: Role
+        type: select
+        options:
+          values:
+            [
+              president,
+              vice-president,
+              secretary,
+              joint-secretary,
+              treasurer,
+              media-liaison,
+              head-flagger,
+              member,
+            ]
+        required: true
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: course
+        label: Course
+        type: string
+        required: true
+      - name: sem
+        label: Semester
+        type: number
+        required: true
+        options:
+          min: 1
+          max: 10
+      - name: image
+        label: Image
+        type: image
+        options:
+          input: public/images/members
+          output: /images/members
+        default: /images/members/default.png
+        required: true
+      - name: socials
+        label: Socials
+        type: object
+        required: true
+        fields:
+          - name: _
+            default: _
+            hidden: true
           - name: discord
             label: Discord
             type: string

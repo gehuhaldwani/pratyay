@@ -1,0 +1,22 @@
+---
+import type { Member } from "@/types/member";
+import ImageWrapper from "../misc/ImageWrapper.astro";
+import SocialRow from "./SocialRow.astro";
+
+interface Props {
+	member: Member;
+}
+
+const { member } = Astro.props;
+---
+
+<div class="col-span-1 flex flex-col w-full items-center text-center">
+	<ImageWrapper
+		src={member.image}
+		class="max-w-[200px] max-h-[200px] image-shine rounded-[15px]"
+	/>
+	<h3 class="!mt-0 !pb-0">{member.role.toUpperCase()}</h3>
+	<strong>{member.name}</strong>
+	<section>{member.course.toUpperCase()} {member.sem}</section>
+	<SocialRow socials={member.socials} class="mt-3" />
+</div>

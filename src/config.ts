@@ -1,30 +1,9 @@
-interface SocialLinks {
-	discord: boolean | string;
-	facebook: boolean | string;
-	github: boolean | string;
-	instagram: boolean | string;
-	linkedin: boolean | string;
-	linktree: boolean | string;
-	telegram: boolean | string;
-	twitter: boolean | string;
-	whatsapp: boolean | string;
-	youtube: boolean | string;
-}
-
-interface Config {
-	title: string;
-	description: string;
-	tagLine: string;
-	defaultOgImage: string;
-	latestPosts: number;
-	postsPerPage: number;
-	social: SocialLinks;
-}
+import type { SiteConfig } from "@/types/site-config";
 
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const configPath = resolve("./src/config.json");
-const configData: Config = JSON.parse(readFileSync(configPath, "utf-8"));
+const configPath = resolve("./src/data/config.json");
+const configData: SiteConfig = JSON.parse(readFileSync(configPath, "utf-8"));
 
 export default configData;
