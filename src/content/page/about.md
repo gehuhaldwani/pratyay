@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: "About प्रत्यय - The Cultural Club"
-image: assets/logo.jpg
+image: assets/logo.png
 ---
 
 **प्रत्यय - The Cultural Club** is a student-driven club at Graphic Era Hill
