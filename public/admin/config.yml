@@ -1,63 +1,80 @@
-site_url: https://pratyay.gehuhaldwani.in
-search: false
-backend:
-  name: github
-  branch: main
-  repo: "gehuhaldwani/pratyay"
-  base_url: https://decap.gehuhaldwani.in
-
-publish_mode: simple
-media_folder: public/images
-public_folder: /images
-collections:
-  - name: "post"
-    label: "Posts"
-    folder: "content/post"
-    create: true
-    publish: false
-    extension: md
-    format: yaml-frontmatter
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "string",
-          required: true,
-        }
-      - { label: "Publish Date", name: "published", widget: "datetime" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - {
-          label: "Category",
-          name: "category",
-          widget: "string",
-          required: false,
-        }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - {
-          label: "Instagram Post Embed",
-          name: "instagramEmbed",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Images Download URL",
-          name: "imagesDownloadUrl",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Cover Image",
-          name: "image",
-          widget: "image",
-          required: false,
-        }
-      - {
-          label: "Carousel",
-          name: "carousel",
-          widget: "list",
-          required: false,
-          fields: [{ widget: "image", name: "image" }],
-        }
-      - { label: "Body", name: "body", widget: "markdown", required: true }
+{
+  site_url: "https://pratyay.gehuhaldwani.in",
+  search: false,
+  backend:
+    {
+      name: "github",
+      branch: "main",
+      repo: "gehuhaldwani/pratyay",
+      base_url: "https://decap.gehuhaldwani.in",
+    },
+  publish_mode: "simple",
+  media_folder: "public/media",
+  public_folder: "/media",
+  collections:
+    [
+      {
+        name: "post",
+        label: "Posts",
+        folder: "content/post",
+        create: true,
+        publish: false,
+        extension: "md",
+        format: "yaml-frontmatter",
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+        media_folder: "{{media_folder}}/{{year}}-{{month}}-{{day}}-{{slug}}",
+        public_folder: "/{{public_folder}}/{{year}}-{{month}}-{{day}}-{{slug}}",
+        fields:
+          [
+            { label: "Title", name: "title", widget: "string", required: true },
+            {
+              label: "Description",
+              name: "description",
+              widget: "string",
+              required: true,
+            },
+            { label: "Publish Date", name: "published", widget: "datetime" },
+            {
+              label: "Draft",
+              name: "draft",
+              widget: "boolean",
+              default: false,
+              required: true,
+            },
+            {
+              label: "Category",
+              name: "category",
+              widget: "string",
+              required: false,
+            },
+            { label: "Tags", name: "tags", widget: "list", required: false },
+            {
+              label: "Instagram Post Embed",
+              name: "instagramEmbed",
+              widget: "string",
+              required: false,
+            },
+            {
+              label: "Images Download URL",
+              name: "imagesDownloadUrl",
+              widget: "string",
+              required: false,
+            },
+            {
+              label: "Cover Image",
+              name: "image",
+              widget: "image",
+              required: false,
+            },
+            {
+              label: "Carousel",
+              name: "carousel",
+              widget: "list",
+              required: false,
+              fields: [{ widget: "image", name: "image" }],
+            },
+            { label: "Body", name: "body", widget: "markdown", required: true },
+          ],
+      },
+    ],
+}
