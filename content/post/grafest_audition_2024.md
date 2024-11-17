@@ -1,15 +1,15 @@
 ---
 title: Student Grafest Audition 2024
-description: प्रत्यय - The Cultural Club is bringing an electrifying Garba
-  Mahotsav on 5th October!
-published: 2024-11-17T19:33:00.000Z
+description: प्रत्यय - The Cultural Club is bringing an electrifying Garba Mahotsav on 5th October!
+published: 2024-11-17T19:33:00
 draft: false
+category: ""
 tags:
   - grafest
 instagramEmbed: https://www.instagram.com/p/DBX1co0vkXZ
+imagesDownloadUrl: ""
 image: /images/poster/student grafest 2024.jpg
 ---
-
 Unleash Your Creativity at Student Grafest 2024
 
 Dear Students,
@@ -39,9 +39,7 @@ Multi Purpose Hall, GEHU, Haldwani
 ### Auditions for:
 
 1. Singing - (Indian/Classical, Western, Band War)
-
 2. Dancing - (Indian/Classical, Western)
-
 3. Skit/Theatre - Acting
 
 ### Registration:
