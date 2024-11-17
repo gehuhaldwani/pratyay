@@ -61,7 +61,6 @@ export default defineConfig({
 					},
 				},
 			],
-<<<<<<< HEAD
 			[
 				rehypeAutolinkHeadings,
 				{
@@ -85,8 +84,6 @@ export default defineConfig({
 					},
 				},
 			],
-=======
->>>>>>> 8022e20f0eac9a9bb9e246cb6d2b0f54b1be9477
 		],
 	},
 });
