@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
-        "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/laksh/Documents/programming/web/pratyay/.github/workflows/deploy.yml"
+        "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/laksh/Documents/programming/web/pratyay/.github/workflows/deploy.yml",
+        "https://json.schemastore.org/yamllint.json": "file:///c%3A/Users/laksh/Documents/programming/web/pratyay/public/admin/config.yml"
     }
 }
