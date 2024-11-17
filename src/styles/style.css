@@ -43,16 +43,16 @@
 }
 
 .gradient-line {
-    background-image:   linear-gradient(90deg,transparent,transparent 50%,theme('colors.pacamara-white') 50%,theme('colors.pacamara-white') 100%),
-                        linear-gradient(90deg,theme('colors.pacamara-secondary'),theme('colors.pacamara-accent'));
+    background-image:   linear-gradient(90deg,transparent,transparent 50%,theme('colors.theme-white') 50%,theme('colors.theme-white') 100%),
+                        linear-gradient(90deg,theme('colors.theme-secondary'),theme('colors.theme-accent'));
     background-size:    var(--gradient-space) var(--gradient-height),100% var(--gradient-height);
 
     @apply transition-all duration-300 rounded-full;
 }
 
 .dark .gradient-line {
-    background-image:   linear-gradient(90deg,transparent,transparent 50%,theme('colors.pacamara-dark') 50%,theme('colors.pacamara-dark') 100%),
-                        linear-gradient(90deg,theme('colors.pacamara-secondary'),theme('colors.pacamara-accent'));
+    background-image:   linear-gradient(90deg,transparent,transparent 50%,theme('colors.theme-dark') 50%,theme('colors.theme-dark') 100%),
+                        linear-gradient(90deg,theme('colors.theme-secondary'),theme('colors.theme-accent'));
     background-size:    var(--gradient-space) var(--gradient-height),100% var(--gradient-height);
 
     @apply transition-all duration-300 rounded-full;
@@ -62,9 +62,9 @@
     line-height: 0.6em;
     vertical-align: 0em;
     border-bottom: .27em solid transparent;
-    -moz-border-image: -moz-linear-gradient(left, theme('colors.pacamara-secondary') 0%, theme('colors.pacamara-accent') 100%);
-    -webkit-border-image: -webkit-linear-gradient(left, theme('colors.pacamara-secondary') 0%, theme('colors.pacamara-accent') 100%);
-    border-image: linear-gradient(to right, theme('colors.pacamara-secondary') 0%, theme('colors.pacamara-accent') 100%);
+    -moz-border-image: -moz-linear-gradient(left, theme('colors.theme-secondary') 0%, theme('colors.theme-accent') 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, theme('colors.theme-secondary') 0%, theme('colors.theme-accent') 100%);
+    border-image: linear-gradient(to right, theme('colors.theme-secondary') 0%, theme('colors.theme-accent') 100%);
     border-image-slice: 1;
 
     @apply transition-all duration-300
@@ -87,7 +87,7 @@
 }
 
 html {
-    scrollbar-color: theme('colors.pacamara-secondary') transparent;
+    scrollbar-color: theme('colors.theme-secondary') transparent;
     scrollbar-width: auto;
 }
 
@@ -100,7 +100,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(180deg,theme('colors.pacamara-secondary'),theme('colors.pacamara-accent'));
-    outline: 0px solid theme('colors.pacamara-accent');
+    background-image: linear-gradient(180deg,theme('colors.theme-secondary'),theme('colors.theme-accent'));
+    outline: 0px solid theme('colors.theme-accent');
     border-radius: 10px;
 }

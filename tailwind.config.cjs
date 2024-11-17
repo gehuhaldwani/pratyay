@@ -8,18 +8,18 @@ module.exports = {
 		},
 		extend: {
 			boxShadow: {
-				"pacamara-shadow": "0px 25px 50px -12px rgba(0, 0, 0, 0.3)",
+				"theme-shadow": "0px 25px 50px -12px rgba(0, 0, 0, 0.3)",
 			},
 			fontFamily: {
-				"pacamara-inter": ['Inter"', "sans-serif"],
-				"pacamara-space": ['Space Grotesk"', "sans-serif"],
+				"theme-inter": ['Inter"', "sans-serif"],
+				"theme-space": ['Space Grotesk"', "sans-serif"],
 			},
 			colors: {
-				"pacamara-primary": "#003049",
-				"pacamara-secondary": "#B2A4FF",
-				"pacamara-accent": "#FFB4B4",
-				"pacamara-dark": "#000E14",
-				"pacamara-white": "#ffffff",
+				"theme-primary": "#003049",
+				"theme-secondary": "#B2A4FF",
+				"theme-accent": "#FFB4B4",
+				"theme-dark": "#000E14",
+				"theme-white": "#ffffff",
 			},
 			aspectRatio: {
 				"9/10": "9 / 16",
