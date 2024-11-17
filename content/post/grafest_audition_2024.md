@@ -8,9 +8,6 @@ tags:
   - grafest
 instagramEmbed: https://www.instagram.com/p/DBX1co0vkXZ
 image: /images/poster/student grafest 2024.jpg
-carousel:
-  - image: //media/---student-grafest-audition-2024/student-grafest-2024.jpg
-  - image: //media/---student-grafest-audition-2024/student-grafest-2024.jpg
 ---
 
 Unleash Your Creativity at Student Grafest 2024
