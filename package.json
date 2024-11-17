@@ -52,6 +52,7 @@
 		"@types/dateformat": "^5.0.2",
 		"@types/mdast": "^4.0.4",
 		"@types/node": "^22.9.0",
+		"@vitejs/plugin-basic-ssl": "^1.1.0",
 		"remark-github-admonitions-to-directives": "^2.1.0"
 	}
 }

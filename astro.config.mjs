@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import basicSsl from "@vitejs/plugin-basic-ssl";
 // astro integrations
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
@@ -85,5 +86,14 @@ export default defineConfig({
 				},
 			],
 		],
+	},
+	server: {
+		host: "127.0.0.1",
+	},
+	vite: {
+		plugins: [basicSsl()],
+		server: {
+			https: true,
+		},
 	},
 });
