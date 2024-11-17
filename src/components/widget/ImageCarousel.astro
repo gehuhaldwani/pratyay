@@ -15,7 +15,7 @@ const { slides } = Astro.props;
 			slides.map((slide) => (
 				<div class="swiper-slide">
 					<div
-						class={`relative w-full flex-none overflow-hidden bg-white dark:bg-pacamara-dark ${Math.random() > 0.5 ? "-" : ""}rotate-${Math.floor(Math.random() * 2) + 1} rounded-[15px]`}
+						class={`relative w-full flex-none overflow-hidden bg-white dark:bg-theme-dark ${Math.random() > 0.5 ? "-" : ""}rotate-${Math.floor(Math.random() * 2) + 1} rounded-[15px]`}
 					>
 						<ImageWrapper
 							src={slide}
@@ -64,7 +64,9 @@ const { slides } = Astro.props;
 		swiper = new Swiper(".swiper-container", {
 			spaceBetween: 18,
 			slidesPerView: 3,
-
+			autoplay: {
+				delay: 5000,
+			},
 			loop: true,
 		});
 		resizeSwiper();

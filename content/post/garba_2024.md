@@ -1,23 +1,28 @@
 ---
-title: "Garba Mahotsav"
-published: 2024-09-26
-description: प्रत्यय - The Cultural Club is bringing an electrifying Garba Mahotsav on 5th October!
+instagramEmbed: 'https://www.instagram.com/p/DAX1cQzPxia'
+imagesDownloadUrl: >-
+  https://1drv.ms/f/c/eb614ff291e0d527/EuA4aBqkGIBPvdA1wvp1T6ABsh688EgogtoD9Ulk4kzoYg
+title: Garba Mahotsav
+description: >-
+  प्रत्यय - The Cultural Club is bringing an electrifying Garba Mahotsav on 5th
+  October!
+published: 2024-09-26T00:00:00.000Z
+image: /images/poster/garba 2024.jpg
 tags:
   - garba
-image: /images/poster/garba 2024.jpg
 carousel:
   - /images/events/2024 garba/1.webp
   - /images/events/2024 garba/2.webp
   - /images/events/2024 garba/3.webp
   - /images/events/2024 garba/4.webp
-instagramEmbed: https://www.instagram.com/p/DAX1cQzPxia
-imagesDownloadUrl: https://1drv.ms/f/c/eb614ff291e0d527/EuA4aBqkGIBPvdA1wvp1T6ABsh688EgogtoD9Ulk4kzoYg
 ---
 
 **Get Ready for Garba Mahotsav!**
 
 प्रत्यय - The Cultural Club is bringing an electrifying Garba Mahotsav on 5th
 October!
+
+[Hello](https://www.instagram.com/p/DAX1cQzPxia)
 
 Immerse yourself in the vibrant beats, festive energy, and joyful spirit! Come
 dressed in your finest traditional attire and let’s celebrate together! Don’t
@@ -40,6 +45,20 @@ President **Vivek Singh Bisht**\
 
 :::
 
-Let’s dance, laugh, and make unforgettable memories together!
+```mermaid
+%% This won't render without implementing a rendering engine (e.g. mermaid on npm)
+flowchart TD
+    id1(this is an example flow diagram) 
+    --> id2(modify me to see changes!)
+    id2 
+    --> id3(Click the top button to preview the changes)
+    --> id4(Learn about mermaid diagrams - mermaid.js.org)
+```
+
+Let's dance, laugh, and make unforgettable memories together!
 
 **#GarbaMahotsav #GEUEvents #CulturalVibes #CelebrateTogether #GarbaNight**
+
+```javascript
+console.log("Hello World");
+```

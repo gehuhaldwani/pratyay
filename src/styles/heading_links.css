@@ -1,0 +1,30 @@
+.content-block {
+    .anchor {
+        margin: -0.125rem !important;
+        margin-left: -0.125rem;
+        margin-left: 0.2ch !important;
+        padding: 0.125rem !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        user-select: none !important;
+        opacity: 0 !important;
+        text-decoration: none !important;
+        position: absolute !important;
+        left: -2rem !important;
+        transition:
+            opacity 0.15s ease-in-out,
+            background 0.15s ease-in-out !important;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        position: relative;
+        &:hover .anchor {
+            opacity: 1 !important;
+        }
+    }
+}
