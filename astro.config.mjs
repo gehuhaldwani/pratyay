@@ -2,9 +2,15 @@ import { defineConfig } from "astro/config";
 // astro integrations
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
+<<<<<<< HEAD
 import react from "@astrojs/react";
 // remark plugins
 import remarkMath from "remark-math";
+=======
+import { defineConfig } from "astro/config";
+import rehypeComponents from "rehype-components"; /* Render the custom directive content */
+import remarkDirective from "remark-directive"; /* Handle directives */
+>>>>>>> 8022e20f0eac9a9bb9e246cb6d2b0f54b1be9477
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkDirective from "remark-directive"; /* Handle directives */
 import { remarkDirectiveToRehypeComponent } from "./src/plugins/remark-directive-rehype.ts";
@@ -61,6 +67,7 @@ export default defineConfig({
 					},
 				},
 			],
+<<<<<<< HEAD
 			[
 				rehypeAutolinkHeadings,
 				{
@@ -84,6 +91,8 @@ export default defineConfig({
 					},
 				},
 			],
+=======
+>>>>>>> 8022e20f0eac9a9bb9e246cb6d2b0f54b1be9477
 		],
 	},
 });

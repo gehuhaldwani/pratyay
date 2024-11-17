@@ -1,4 +1,5 @@
 interface Socials {
+	website?: string;
 	discord?: string;
 	facebook?: string;
 	github?: string;
@@ -16,6 +17,7 @@ export type { Socials };
 import { z } from "astro:content";
 
 const socialsZodSchema: z.ZodType<Socials> = z.object({
+	website: z.string().optional(),
 	discord: z.string().optional(),
 	facebook: z.string().optional(),
 	github: z.string().optional(),

@@ -163,7 +163,7 @@ content:
     view:
       fields: [role, name, course, sem, image]
       primary: name
-      sort: [role]
+      sort: [role, name]
       default:
         search: ""
         sort: role
@@ -182,7 +182,7 @@ content:
               treasurer,
               media-liaison,
               head-flagger,
-              member,
+              flagger,
             ]
         required: true
       - name: name
@@ -216,6 +216,9 @@ content:
           - name: _
             default: _
             hidden: true
+          - name: website
+            label: website
+            type: string
           - name: discord
             label: Discord
             type: string
