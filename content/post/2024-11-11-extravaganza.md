@@ -1,10 +1,13 @@
 ---
 title: Extravaganza
 description: Summer Fest
-published: 2024-05-11T06:30:00.000Z
+published: 2024-05-11T06:30:00
 draft: false
+category: ""
 tags:
   - summer fest
+instagramEmbed: ""
+imagesDownloadUrl: ""
 image: /images/poster/extravegenza.jpg
 carousel:
   - /images/events/2024 garba/1.webp
@@ -12,7 +15,6 @@ carousel:
   - /images/events/2024 garba/3.webp
   - /images/events/2024 garba/4.webp
 ---
-
 # Summer Fest 2024
 
 Embark on a mesmerizing cultural sojourn with us on this Saturday Evening, where
