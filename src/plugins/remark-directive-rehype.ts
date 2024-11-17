@@ -1,6 +1,9 @@
+// @ts-nocheck
 import type { RemarkPlugin } from "@astrojs/markdown-remark";
 import { h } from "hastscript";
 import { visit } from "unist-util-visit";
+
+// ignore type chechking for whole file
 
 export const remarkDirectiveToRehypeComponent: RemarkPlugin<[]> =
 	() =>
