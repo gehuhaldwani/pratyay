@@ -2,12 +2,12 @@
 title: Student Grafest Audition 2024
 description: प्रत्यय - The Cultural Club is bringing an electrifying Garba
   Mahotsav on 5th October!
-published: 2024-10-22T18:30:00.000Z
+published: 2024-11-17T19:33:00.000Z
 draft: false
 tags:
   - grafest
-image: /images/poster/student grafest 2024.jpg
 instagramEmbed: https://www.instagram.com/p/DBX1co0vkXZ
+image: /images/poster/student grafest 2024.jpg
 ---
 
 Unleash Your Creativity at Student Grafest 2024
