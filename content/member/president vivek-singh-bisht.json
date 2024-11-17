@@ -1,11 +1,10 @@
 {
-	"role": "president",
-	"name": "Vivek Singh Bisht",
-	"course": "BCA",
-	"sem": 5,
-	"image": "/images/members/vivek_singh_bisht.png",
-	"socials": {
-		"_": "_",
-		"instagram": "https://www.instagram.com/"
-	}
+  "role": "president",
+  "name": "Vivek Singh Bisht",
+  "course": "BCA",
+  "sem": 5,
+  "image": "/images/members/vivek_singh_bisht.png",
+  "socials": {
+    "_": "_"
+  }
 }
