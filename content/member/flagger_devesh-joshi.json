@@ -1,10 +1,10 @@
 {
-	"role": "flagger",
-	"name": "Devesh Joshi",
-	"course": "B Tech CSE",
-	"sem": 5,
-	"image": "/images/members/devesh_joshi.jpg",
-	"socials": {
-		"_": "_"
-	}
+  "role": "flagger",
+  "name": "Devesh Joshi",
+  "course": "B Tech CSE",
+  "sem": 5,
+  "image": "/images/members/Devesh_Joshi.jpg",
+  "socials": {
+    "_": "_"
+  }
 }
