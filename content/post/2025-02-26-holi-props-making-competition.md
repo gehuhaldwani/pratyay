@@ -14,11 +14,11 @@ image: /images/events/WhatsApp Image 2025-02-25 at 17.22.37_e265d4fb.jpg
 ---
 Get ready to showcase your creativity in our Holi Props Making Competition! '**_Best out of waste'_**: Let your imagination flow and create a masterpiece using eco-friendly materials. The most stunning prop will be awarded, so give it your best shot! ✨🏆
 
-🗓 **Date:**07/03/2025
-
-⏰ **Time:** 10:00 Am Onwards
-
-🏢 **Venue:** Near Medical room 
+> 🗓 **Date:** 07/03/2025
+> 
+> ⏰ **Time:** 10:00 Am Onwards
+> 
+> 🏢 **Venue:** Near Medical room 
 
 📲 **Join the WhatsApp Group**
 
