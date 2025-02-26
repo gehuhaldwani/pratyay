@@ -12,7 +12,7 @@ image: /images/events/WhatsApp Image 2025-02-25 at 17.22.38_05edaed1.jpg
 ---
 Get ready to showcase your creativity in our Rangoli Making Competition! Let your imagination flow and create a masterpiece using unique techniques. The most stunning Rangoli will be awarded, so give it your best shot! ✨🏆
 
-🗓 **Date:**07/03/2025
+🗓 \*\*Date:\*\*07/03/2025
 
 ⏰ **Time:** 10:00 Am Onwards
 
@@ -44,6 +44,8 @@ Get ready to showcase your creativity in our Rangoli Making Competition! Let you
 **_If you don't have a second member, kindly leave that section blank_**
 
 Let your colors speak and make the ground your canvas! 🌿🎭
+
+> **Fill the Form:** [**https://forms.gle/AaDCZXBmrpjCRjfb6**](https://forms.gle/AaDCZXBmrpjCRjfb6)
 
 📞 For Any Queries, Contact:
 
