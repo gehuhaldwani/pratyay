@@ -8,6 +8,8 @@ published: 2025-03-07T10:00:00.000Z
 draft: false
 tags:
   - "Holi "
+  - Props Making
+  - Ranguthsav 4.0
 image: /images/events/WhatsApp Image 2025-02-25 at 17.22.37_e265d4fb.jpg
 ---
 Get ready to showcase your creativity in our Holi Props Making Competition! '**_Best out of waste'_**: Let your imagination flow and create a masterpiece using eco-friendly materials. The most stunning prop will be awarded, so give it your best shot! ✨🏆
@@ -49,6 +51,8 @@ Rules:
 **_If you don't have any Other members, kindly leave that section blank_**
 
 Let your colors speak and make the ground your canvas! 🌿🎭
+
+> **Fill the form :** [https://forms.gle/GHZ7hQojpS7hLyWt8](https://forms.gle/GHZ7hQojpS7hLyWt8)
 
 📞 For Any Queries, Contact:
 
