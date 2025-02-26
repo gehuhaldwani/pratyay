@@ -1,12 +1,13 @@
 {
-	"title": "प्रत्यय The Cultural Club",
-	"description": "The official website of प्रत्यय The Cultural Club of Graphic Era Hill University, Haldwani Campus.",
-	"tagLine": "Music | Dance | Drama | Art | Literature | Culture",
-	"defaultOgImage": "./og.jpg",
-	"latestPosts": 3,
-	"postsPerPage": 10,
-	"socials": {
-		"instagram": "https://www.instagram.com/pratyay_gehu_haldwani/",
-		"whatsapp": "https://chat.whatsapp.com/Ce23OK8YCRv2QN16npS3lz"
-	}
+  "title": "प्रत्यय The Cultural Club",
+  "description": "The official website of प्रत्यय The Cultural Club of Graphic Era Hill University, Haldwani Campus.",
+  "tagLine": "Music | Dance | Drama | Art | Literature | Culture",
+  "defaultOgImage": "./og.jpg",
+  "latestPosts": 3,
+  "postsPerPage": 15,
+  "socials": {
+    "_": "_",
+    "instagram": "https://www.instagram.com/pratyay_gehu_haldwani/",
+    "whatsapp": "https://chat.whatsapp.com/Ce23OK8YCRv2QN16npS3lz"
+  }
 }
