@@ -8,15 +8,17 @@ published: 2025-03-07T10:00:00.000Z
 draft: false
 tags:
   - Holi
+  - "Rangoli Making "
+  - Ranguthsav 4.0
 image: /images/events/WhatsApp Image 2025-02-25 at 17.22.38_05edaed1.jpg
 ---
 Get ready to showcase your creativity in our Rangoli Making Competition! Let your imagination flow and create a masterpiece using unique techniques. The most stunning Rangoli will be awarded, so give it your best shot! ✨🏆
 
-🗓 \*\*Date:\*\*07/03/2025
-
-⏰ **Time:** 10:00 Am Onwards
-
-🏢 **Venue:** Poarch area 
+> 🗓 **Date:** 07/03/2025
+> 
+> ⏰ **Time:** 10:00 Am Onwards
+> 
+> 🏢 **Venue:** Poarch area 
 
 📲 **Join the WhatsApp Group**
 
