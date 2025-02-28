@@ -48,6 +48,8 @@ Get ready to showcase your creativity in our Rangoli Making Competition! Let you
 Let your colors speak and make the ground your canvas! 🌿🎭
 
 > **Fill the Form:** [**https://forms.gle/AaDCZXBmrpjCRjfb6**](https://forms.gle/AaDCZXBmrpjCRjfb6)
+> 
+> **🛑 Entries close on March 4, 2025.**
 
 📞 For Any Queries, Contact:
 
