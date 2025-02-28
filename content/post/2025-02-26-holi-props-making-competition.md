@@ -53,6 +53,8 @@ Rules:
 Let your colors speak and make the ground your canvas! 🌿🎭
 
 > **Fill the form :** [https://forms.gle/GHZ7hQojpS7hLyWt8](https://forms.gle/GHZ7hQojpS7hLyWt8)
+> 
+> **🛑 Entries close on March 4, 2025.**
 
 📞 For Any Queries, Contact:
 
